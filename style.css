@@ -19,6 +19,69 @@ body {
   overflow: hidden;
   perspective: 1000px;
 }
+
+.mensaje {
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  width: 80%;
+  height: 100px; /* Altura fija para asegurar que los mensajes se superpongan */
+  top: 50%;
+}
+
+.message {
+  font-size: 4rem;
+  color: #ffffff;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: fadeInOut 20s ease-in-out infinite; /* Repetir infinitamente */
+  text-shadow: 1px 1px 10px white; /* Sombra blanca */
+  transform: translate(-50%, -50%); /* Centramos los mensajes */
+  left: 50%;
+}
+
+  /* Animación para la transición entre mensajes */
+  @keyframes fadeInOut {
+    0%, 25% {
+      opacity: 0;
+      transform: translate(-50%, 50%);
+    }
+    30%, 45% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    50%, 100% {
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+/* Definimos el timing para cada mensaje */
+.message-1 {
+  animation-delay: 0s;
+}
+
+.message-2 {
+  animation-delay: 4s;
+}
+
+.message-3 {
+  animation-delay: 8s;
+}
+
+.message-4 {
+  animation-delay: 12s;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.message-5 {
+  animation-delay: 16s;
+}
+
+
 .night {
   position: fixed;
   left: 50%;
